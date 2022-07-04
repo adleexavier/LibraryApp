@@ -1,0 +1,97 @@
+CREATING PACKAGE 
+npm init
+
+INSTALLING EXPRESS
+npm install express --save 
+
+Node_module
+contains only builtin module u can use without any further installation 
+
+package.json flie --> used for storing dependencies version number, author, gitub repo link etc
+package-lock.json file --> solely used to lock dependencies to a specific version number , ie when you transfer your project, the version number will remain constant (in a tree structure) and will never change if package-lock.json is also present in the directory 
+
+ROUTING --> whenever a req comes from a client ---> it (req) comes in the form of a uri  --> how our application respond to this particular req is refered to as routing 
+
+TEMPLAte engine --> see our design is in html file and our data is js file --> so if you want to embed a js code into html, it is tough in server side
+A software to combine templates with data model  
+
+TEMPLAte engine used here is EJS npm install ejs --save
+
+parsing --> done by browser 
+rendering --> allocating the all the required space in the document so that it can be displayed in the browser 
+loading --> all the files (css image etc) are made available for use 
+
+--> change the index.html to index.ejs
+
+__dirname + "/dfkh/skdhf" --> = --> "./dfkh/skdhf" i think 
+
+doubt --> app.set(firs para, second para) 
+
+-----------------------------------------
+template engine (ejs) is used to send data from server to html templates
+data is recieved in ejs file in this format --> <% %>
+so we should embed the js in this format too 
+
+library app
+
+get the theme from --> bootstrapzero
+https://www.codeply.com/go/bp/pVkM36Biz1
+
+express by default doesnt allow to use static files that easily.
+app.use(express.static('./public'))
+
+DOUBTS --> HOW IS url moving in ordinary html template wrt the node app.get("url")
+--> server number problem 
+--> ejs--> books is not defined 
+--> is ejs for loop always in running mode
+--> mongo db back end to client connection waiting problem --> how to tackle 
+--> app.use(express.urlencoded({extended:true})); --> this should be coming in adminroute.js because admin is handling the forms
+
+----> IMPORTANT <----
+LEVEL 2 URL --> THE SERVER CANNOT ACESS THE STATIC FILES CSS AND js
+LEVEL 2 EG : localhost:5000/home/adlee
+here adlee is level 2
+so to apply the styles --> you have to put a / (at the href and script (linking tag of css and js) of the html or ejs file) whatever files you want to acess
+
+
+just like html pages , the routers are kept in a folder and the main router is kept in the app.js and linked with other routes by using module require technique
+
+----------------SKILL LEARNED ----------------------------------------------------
+if an undefined error (like "book is undefined") occurs
+
+CTRL+F and type the word which the compiler is termed as undefined
+instead of manually checking, this is a lot more faster way 
+
+saving all the files in vs code by CTRL tab and ctrl s multiple times instead of using mouse to select the files and save
+
+
+-----------------------------------------------------------------------------------
+------------------------------------------FROM GOKUL-----------------------------------------
+the github can only deal with the frontend 
+
+-- github provides github page service 
+these pages are the front end
+
+
+--------------------------->MONGO DB INTEGRATION WITH  LIBRARY APP <--------------------------------
+
+MONGOOSE package is responsible for the connection between server side with mongodb
+
+ npm install mongoose 
+
+ create a seprate folder inside the src folder model--> bookdata.js file
+ 
+ note 
+    everything in mongoose starts with a schema 
+    each schema matches to the mongoDB collection 
+    provide structure for the documents that we create
+              like how you are inserting a document
+
+--- form using get method---
+query parameter are a set of parameters attached to the end of the url --(for more info-- look in the folder " form get and post" in the ictg-workplace)
+
+
+Acessing the url parameter (eg:0 or 1 or 2 ....) we use req.params (you know it --> for display a single book in library app)
+
+C:\Users\hp\AppData\Local\Autodesk
+Copy-Item ".\URDF_Exporter\" -Destination "C:\Users\hp\AppData\Local\Autodesk\Autodesk Fusion 360\API\Scripts\" -Recurse

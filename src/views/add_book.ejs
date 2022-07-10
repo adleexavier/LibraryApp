@@ -97,7 +97,7 @@
          
          <div class="row">
            <h1>Add a Book (Get method)</h1>
-             <form method = "GET" action="/admin/gets">
+             <form method = "GET" action="/admin/create">
                  Title: <input type="text" name="title">   
                  Author: <input type="text" name="author">  
                  Genere: <input type="text" name="Genere"><br>  
@@ -108,8 +108,9 @@
          </div>
 
          <div class="row">  
-           <h1>Delete a Book (Post method)</h1>
-          <form method = "POST" action="/admin/pos">
+           <h1>Delete a Book (Post Method)</h1>
+           <h4>(only title is enough)</h4>
+          <form method = "POST" action="/admin/delete">
               Title: <input type="text" name="title">    
               Author: <input type="text" name="author">  
               Genere: <input type="text" name="Genere"><br>
@@ -118,6 +119,22 @@
               <button type="submit">Add</button> 
           </form>
       </div>
+
+      <div class="row">  
+
+        <h1>Update a Book (Post method)</h1>
+        <h4>(Specify the title of the document to be changed)</h4>
+
+       <form method = "POST" action="/admin/update">
+           Id: <input type="text" name="id">    
+           Title: <input type="text" name="title">    
+           Author: <input type="text" name="author">  
+           Genere: <input type="text" name="Genere">
+           Image: <input type="file" name="Image">
+           <br>    
+           <button type="submit">Add</button> 
+       </form>
+     </div>
                   
           
           <a href="/" class="btn btn-primary pull-right btnNext">More <i class="glyphicon glyphicon-chevron-right"></i></a>

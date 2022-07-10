@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/library') // library is the name of the database given
-
+mongoose.connect('mongodb+srv://userone:userone@bookdata.19xdgdb.mongodb.net/Library?retryWrites=true&w=majority') // library is the name of the database given
+                              // ^pwd here (database acess in cloud)       db name ^
 
 const Schema = mongoose.Schema; //acessing the schema in the mongoose package
 
@@ -23,6 +23,6 @@ const bookschema = new Schema({
 
 
 //TO USE THE SCHEMA WE HAVE TO CONVERT INTO MODEL
-var Bookdata = mongoose.model('bookdata',bookschema); // bookdata is the collection name
+var Bookdata = mongoose.model('bookdatas',bookschema); // bookdata is the collection name
                                                      // bookdata--> in mongodb you can see it as bookdatas --> they are converting it to plural automatically (thats the only info i know )
 module.exports = Bookdata;  // you are exporting the instance of a document in a collection 

@@ -1,4 +1,4 @@
-const { urlencoded } = require("express");
+//const { urlencoded } = require("express");
 const express = require("express"); 
 const app = express();
 
@@ -15,17 +15,28 @@ const nav = [
     },
     {
         link: '/admin', name: 'Add Book'
+    },
+    {
+        link: '/login',  name: "Login"
+    },
+    {
+        link: '/signup', name: "Signup"
     }
 ];
 
 const booksRouter = require("./src/routes/bookroutes")(nav);
 const adminRouter = require("./src/routes/adminRoutes")(nav);
+const loginRouter = require("./src/routes/loginRouter")(nav);
+const signupRouter = require("./src/routes/signupRouter")(nav);
+
 
 app.use('/books',booksRouter);
 app.use('/admin', adminRouter);
+app.use('/login', loginRouter);
+app.use('/signup', signupRouter);
 
 // To encode the post request we need a middleware
-app.use(express.urlencoded({extended:true}));
+//app.use(express.urlencoded({extended:true}));
 
 app.get("/",function(req,res)
 {

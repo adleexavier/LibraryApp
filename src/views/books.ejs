@@ -97,14 +97,14 @@
           <div class="row">    
             <br>
             <div class="col-md-2 col-sm-3 text-center">
-              <a class="story-title" href="/books/<%=j%>"><img alt="" src="./images/<%=books[j].img%>" style="width:100px;height:100px" class="img-circle"></a>
+              <a class="story-title" href="/books/<%=j%>"><img alt="" src="./images/<%=books[j].image%>" style="width:100px;height:100px" class="img-circle"></a>
             </div>
             <div class="col-md-10 col-sm-9">
               <h3><%=books[j].title%></h3>
               <div class="row">
                 <div class="col-xs-9">
                   <h4><span class="label label-default"><%=books[j].author%></span></h4><h4>
-                  <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • <a href="/books/<%=j%>" class="text-muted">Read More</a></small>
+                  <small style="font-family:courier,'new courier';" class="text-muted">2 hours ago  • <a href="/books/<%=books[j]._id%>" class="text-muted">Read More</a></small>
                   </h4></div>
                 <div class="col-xs-3"></div>
               </div>
